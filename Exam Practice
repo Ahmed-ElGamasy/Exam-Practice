@@ -1,0 +1,335 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Write a C++ program that computes the total and average of five numbers between 10 and 100, which should be obtained from the user.
+/*int main()
+{
+	repeatme:
+	float a, b, c, d, e, total, average;
+	char end[1000];
+	cout << "Please Enter 5 numbers:\n";
+	cin >> a >> b >> c >> d >> e;
+	total = a + b + c + d + e;
+	average = (a + b + c + d + e) / 5;
+	cout << "The Total is: " << total <<endl;
+	cout << "The Average is " << average <<endl << endl;
+	cout << "Enter any key to reset: "; 
+	cin >> end;
+	system("cls");
+	goto repeatme;
+	return 0;
+}
+*/
+
+// Ask 3 users to enter their names-surnames and find the length of each entry by also checking if any numbers are entered mistakenly.
+/*int main()
+{
+
+	string name1, name2, name3;
+	char a, b, c;
+	cout << "Please Enter the names of 3 users \n[Keep in mind to leave only 1 space between the Name and Surname]: \n";
+	getline(cin,name1), getline(cin, name2), getline(cin, name3);
+
+	cout << "\nThe length of the First Name : " << name1.length() -1 << "\nThe length of the Second Name: " << name2.length() -1 << "\nThe length of the Third Name: " << name3.length() -1;
+	system("pause>0");
+}*/
+
+// Write a program that converts Celsius to Fahrenheits.
+/*
+int main()
+{
+	repeatme:
+	float c, f;
+	char end[1000];
+	cout << "-=Celsius to Fahrenheit Converter=-\nPlease Enter the Celsius Value: ";
+	cin >> c;
+	f = c * (9 / 5) + 32;
+	cout << c << " Degrees Celsius is " << f << " Degrees Fahrenhiet\n\n";
+	cout << "Enter any key to reset. ";
+	cin >> end;
+	system("cls");
+	goto repeatme;
+}
+
+*/
+
+//A professor generates letter grades using the Table below : Given a numeric grade, print the letter.
+/*int main()
+{
+repeatme:
+	int grade;
+	char end[1000];
+
+	cout << "Enter Student Grade: ";
+	cin >> grade;
+	cout << endl;
+
+	if (grade >= 0 && grade <= 60)
+		cout << grade << " is equivelant to F.";
+	else if (grade >= 61 && grade <= 70)
+		cout << grade << " is equivelant to D.";
+	else if (grade >= 71 && grade <= 80)
+		cout << grade << " is equivelant to C.";
+	else if (grade >= 81 && grade <= 90)
+		cout << grade << " is equivelant to B.";
+	else if (grade >= 91 && grade <= 100)
+		cout << grade << " is equivelant to A.";
+	else
+		cout << "INVALID: Incorrect Grade Value.";
+	cout << "\n\nEnter any key to reset: ";
+	cin >> end;
+	system("cls");
+	goto repeatme;
+}*/
+
+//Modify the previous program to print out a + or - after the letter grade based on the last digit of the score.The modifiers are listed in Table below :
+/*int main()
+{
+	repeatme:
+	int grade;
+	char end[1000];
+	char sign;
+
+	cout << "Enter Student Grade: ";
+	cin >> grade;
+	cout << endl;
+	
+	{
+		if (grade % 10 <= 3 && grade % 10 <= 1)
+			sign = '-';
+		else if (grade%10 <=7 && grade%10 >=4)
+			sign = ' ';
+		else if (grade %10 ==0 || grade%10 <=9 )
+			sign = '+';
+	}
+
+	if (grade >= 0 && grade <= 60)
+		cout << grade << " is equivelant to F.";
+	else if (grade >= 61 && grade <= 70)
+		cout << grade << " is equivelant to D" << sign << ".";
+	else if (grade >= 71 && grade <= 80)
+		cout << grade << " is equivelant to C" << sign << ".";
+	else if (grade >= 81 && grade <= 90)
+		cout << grade << " is equivelant to B" << sign << ".";
+	else if (grade >= 91 && grade <= 100)
+		cout << grade << " is equivelant to A" << sign << ".";
+	else
+		cout << "INVALID: Incorrect Grade Value.";
+	cout << "\n\nEnter any key to reset: ";
+	cin >> end;
+	system("cls");
+	goto repeatme;
+}
+*/
+
+//A leap year is any year divisible by 4 unless it is divisible by 100, but not 400. Write a program to tell whether a year is a leap year.
+/*int main()
+{
+	int year, remainder;
+	char end[1000];
+repeatme:
+	cout << "-=[Leap Year Identifier]=-\nPlease Enter a year: ";
+	cin >> year;
+	if (year % 4 != 0)
+		cout << year << " is NOT a leap year";
+	else if (year % 100 != 0)
+		cout << year << " is a leap year.";
+	else if (year % 400 != 0)
+		cout << year << " is NOT a leap year.";
+	else
+		cout << year << " is a leap year.";
+	cout << "\n\nEnter any key to reset: ";
+	cin >> end;
+	system("cls");
+	goto repeatme;
+	system("pause>0");
+}*/
+
+//Print a checkerboard (8-by-8 grid). Each square should be 5-by-3 characters wide.
+/*int main()
+	{
+		int k = 0, height, width;
+		cout << "Please Enter a Height and then Width: \n";
+		cin >> height >> width;
+		while (k < height)
+		{
+			int w, h = 0;
+			for (w = 0; w < width; w++)
+			{
+				cout << "+-----+";
+			}
+			while (h < width)
+			{
+				cout << endl;
+				for (w = 0; w < width; w++)
+				{
+					cout << "|-----|";
+				}
+				h++;
+			}
+			cout << endl;
+			k++;
+		}
+		for (int s = 0; s < width; s++)
+		{
+			cout << "+-----+";
+		}
+		system("pause>0");
+		return 0;
+	}*/
+
+//Write a program to average n numbers.
+/*int main()
+{
+	repeatme:
+	int amount;
+	float sum = 0, number;
+	char end[1000];
+	cout << "welcome to average calculator\nplease enter the amount of numbers you want to average: ";
+	cin >> amount;
+	for (int i = 0; i < amount; i++)
+	{
+		cout << "number " << i + 1 << ": ";
+		cin >> number;
+		sum += number;
+	}
+	cout << "the average is " << sum / amount << endl << endl;
+	cout << "enter any key(s) to reset:";
+	cin >> end;
+	system("cls");
+	goto repeatme;
+	return 0;
+}*/
+
+//Write a program to print out the multiplication table
+/*int main()
+{
+	for (int i = 1; i <= 12; i++)
+	{
+		for (int j = 1; j <= 12; j++)
+		{
+			cout << i << " x " << j << " = " << i * j << endl;
+		}
+		cout << endl;
+	}
+	system("pause>0");
+	return 0;
+}*/
+
+//Write a program that reads a character and prints out whether it is a vowel or a consonant.
+/*int main()
+{
+	char a;
+	cout << "-=[Please Enter a character]=-\n";
+	repeatme:
+	cin >> a;
+	if (isdigit(a) != 0)
+		cout << "\nYou have entered a number.";
+	else if (a == 'a' || a == 'o' || a == 'u' || a == 'e' || a == 'i')
+		cout << "\nThe character you have entered is a Vowel.";
+	else
+		cout << "\nThe character you have entered is a Constant.";
+	cout << endl << endl;
+	goto repeatme;
+}*/
+
+//Write a program that converts numbers to words. Example: 895 results in ''eight nine five."
+/*int main()
+{
+	int n, s = 0;
+	int r;
+	cout << "Please Enter a number: ";
+	cin >> n;
+	while (n > 0)
+	{
+		r = n % 10;
+		s = s * 10 + r;
+		n = n / 10;
+	}
+	n = s;
+	while (n > 0)
+	{
+		r = n % 10;
+		switch (r)
+		{
+		case 1:cout << "One "; break;
+		case 2:cout << "Two "; break;
+		case 3:cout << "Three "; break;
+		case 4:cout << "Four "; break;
+		case 5:cout << "Five "; break;
+		case 6:cout << "Six "; break;
+		case 7:cout << "Seven "; break;
+		case 8:cout << "Eight "; break;
+		case 9:cout << "Nine "; break;
+		case 0:cout << "Zero "; break;
+		default:cout << "N/A"; break;
+		}
+		n = n / 10;
+	}
+	return 0;
+}*/
+
+// The total resistance of n resistors.
+/*int main()
+{
+repeatme:
+	int amount;
+	float sum = 0, number;
+	char end[1000];
+	cout << "Enter the number of Resistors that you would like to use: ";
+	cin >> amount;
+	for (int i = 0; i < amount; i++)
+	{
+		cout << "Resistor " << i + 1 << ": ";
+		cin >> number;
+		sum += (1/number);
+	}
+	cout << "The Total Resistor is = " << 1/sum << endl << endl;
+	cout << "Enter any key(s) to reset:";
+	cin >> end;
+	system("cls");
+	goto repeatme;
+	return 0;
+}*/
+
+//Write a program calculating the Fibonacci numbers for the user entered n number of elements.
+/*int main()
+{
+	int num, first = 0, second = 1, next;
+	cout << "Enter the number of terms to be printed in the fibonacci series." << endl;
+	cin >> num;
+	
+	cout << "Fibonacci Series: " << endl;
+
+	for (int i = 0; i < num; i++)
+	{
+		cout << first << endl;
+		next = first + second;
+		first = second;
+		second = next;
+	}
+	system("pause>0");
+	return 0;
+}*/
+
+//Write a program to tell whether a number is prime.
+/*int main()
+{
+repeatme:
+	int num, i, check = 0;
+	cout << "Please Enter a number: ";
+	cin >> num;
+
+	for (i = 1; i <= num; i++)
+	{
+		if (num % i == 0)
+			check++;
+	}
+	if (check == 2)
+		cout << num << " is a Prime Number." << endl << endl;
+	else
+		cout << num << " is NOT a Prime Number." << endl<< endl;
+	goto repeatme;
+	return 0;
+}*/
