@@ -26,19 +26,32 @@ using namespace std;
 	system("cls");
 	goto repeatme;
 	return 0;
-}
-*/
+}*/
 
 // Ask 3 users to enter their names-surnames and find the length of each entry by also checking if any numbers are entered mistakenly.
 /*int main()
 {
 
 	string name1, name2, name3;
-	char a, b, c;
-	cout << "Please Enter the names of 3 users \n[Keep in mind to leave only 1 space between the Name and Surname]: \n";
-	getline(cin,name1), getline(cin, name2), getline(cin, name3);
-
-	cout << "\nThe length of the First Name : " << name1.length() -1 << "\nThe length of the Second Name: " << name2.length() -1 << "\nThe length of the Third Name: " << name3.length() -1;
+	bool check = false;
+	repeatme:
+	cout << "Please allow 3 users to enter their names:  \n[Keep in mind to leave only 1 space between the Name and Surname]: \n";
+	getline(cin, name1), getline(cin, name2), getline(cin, name3);
+	for (int i = 0; i < name1.length(); i++)
+	{
+		if (isdigit(name1.at(i)) || isdigit(name2.at(i)) || isdigit(name3.at(i)))
+		{
+			check = true;
+			break;
+		}
+	}
+	if (check)
+	{
+		cout << "\nOne of the names you have entered contains a number.\n\n";
+		goto repeatme;
+	}
+	else
+		cout << "\nThe length of the First Name : " << name1.length() - 1 << "\nThe length of the Second Name: " << name2.length() - 1 << "\nThe length of the Third Name: " << name3.length() - 1;
 	system("pause>0");
 }*/
 
@@ -127,8 +140,7 @@ repeatme:
 	cin >> end;
 	system("cls");
 	goto repeatme;
-}
-*/
+}*/
 
 //A leap year is any year divisible by 4 unless it is divisible by 100, but not 400. Write a program to tell whether a year is a leap year.
 /*int main()
@@ -155,40 +167,39 @@ repeatme:
 
 //Print a checkerboard (8-by-8 grid). Each square should be 5-by-3 characters wide.
 /*int main()
+{
+	int h = 0, height, width;
+	cout << "Please Enter a Height and then Width of the grid: \n(For Example 2x2, 5x5, 8x8, ... etc)\n";
+	cin >> height >> width;
+	while (h < height)
 	{
-		int k = 0, height, width;
-		cout << "Please Enter a Height and then Width: \n";
-		cin >> height >> width;
-		while (k < height)
-		{
-			int w, h = 0;
-			for (w = 0; w < width; w++)
-			{
-				cout << "+-----+";
-			}
-			while (h < width)
-			{
-				cout << endl;
-				for (w = 0; w < width; w++)
-				{
-					cout << "|-----|";
-				}
-				h++;
-			}
-			cout << endl;
-			k++;
-		}
-		for (int s = 0; s < width; s++)
+		int w, sh = 0;
+		for (w = 0; w < width; w++)
 		{
 			cout << "+-----+";
 		}
-		system("pause>0");
-		return 0;
-	}*/
+		while (sh < 5)
+		{
+			cout << endl;
+			for (w = 0; w < width; w++)
+			{
+				cout << "|     |";
+			}
+			sh++;
+		}
+		cout << endl;
+		h++;
+	}
+	for (int end = 0; end < width; end++)
+	{
+		cout << "+-----+";
+	}
+	system("pause>0");
+	return 0;
+}*/
 
-//Write a program to average n numbers.
-/*int main()
-{
+//Write a program to average n numbers.*int main()
+/*{
 	repeatme:
 	int amount;
 	float sum = 0, number;
@@ -235,6 +246,8 @@ repeatme:
 		cout << "\nYou have entered a number.";
 	else if (a == 'a' || a == 'o' || a == 'u' || a == 'e' || a == 'i')
 		cout << "\nThe character you have entered is a Vowel.";
+	else if (a == 'A' || a == 'O' || a == 'U' || a == 'E' || a == 'I')
+		cout << "\nThe character you have entered is a Vowel.";
 	else
 		cout << "\nThe character you have entered is a Constant.";
 	cout << endl << endl;
@@ -250,14 +263,14 @@ repeatme:
 	cin >> n;
 	while (n > 0)
 	{
-		r = n % 10;
+		r = n % 10; 
 		s = s * 10 + r;
 		n = n / 10;
 	}
 	n = s;
 	while (n > 0)
 	{
-		r = n % 10;
+		r = n % 10; 
 		switch (r)
 		{
 		case 1:cout << "One "; break;
@@ -271,9 +284,9 @@ repeatme:
 		case 9:cout << "Nine "; break;
 		case 0:cout << "Zero "; break;
 		default:cout << "N/A"; break;
-		}
-		n = n / 10;
-	}
+		} 
+		n = n / 10; 
+	} 
 	return 0;
 }*/
 
