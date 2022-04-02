@@ -157,14 +157,12 @@ repeatme:
 repeatme:
 	cout << "-=[Leap Year Identifier]=-\nPlease Enter a year: ";
 	cin >> year;
-	if (year % 4 != 0)
-		cout << year << " is NOT a leap year";
-	else if (year % 100 != 0)
+	if (year % 4 == 0 && year %100 !=0)
+		cout << year << " is a leap year";
+	else if (year % 400 == 0)
 		cout << year << " is a leap year.";
-	else if (year % 400 != 0)
-		cout << year << " is NOT a leap year.";
 	else
-		cout << year << " is a leap year.";
+		cout << year << " is NOT a leap year.";
 	cout << "\n\nEnter any key to reset: ";
 	cin >> end;
 	system("cls");
@@ -185,7 +183,7 @@ repeatme:
 		{
 			cout << "+-----+";
 		}
-		while (sh < 5)
+		while (sh < 3)
 		{
 			cout << endl;
 			for (w = 0; w < width; w++)
